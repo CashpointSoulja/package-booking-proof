@@ -16,6 +16,6 @@ The source bundles successfully with `npm run deploy:check`; no deployment is pe
 
 Public Demo: **not deployed**. The exact blocker is an absent owner-approved Cloudflare destination/account/public URL and absent scoped deployment authentication. No existing deployment is changed. See [deployment readiness](deployment-readiness.md).
 
-Video: **no actual public-HTTPS capture or final cut**. The exact 105-second storyboard, narration, visible-interaction capture source, CFR-before-trim composer and boundary inspection sources are prepared. The offline rehearsal WAV was measured at 105.000 seconds; it is draft audio, not the requested video. Direct HTTPS in the current cloud browser also has the documented certificate-trust blocker. Ayo's complete watch/listen remains pending. See [recording status](recording-status.md).
+Video: **no actual public-HTTPS capture or final cut**. The exact 105-second storyboard, narration, visible-interaction capture source, CFR-before-trim composer and boundary inspection sources are prepared. The offline rehearsal WAV was measured at 105.000 seconds; it is draft audio, not the requested video. Ayo's complete watch/listen remains pending. See [recording status](recording-status.md).
 
 No outreach, application, paid API, purchase, live booking, payment, real guest-data upload or Trybe connection occurred. Work is confined to the designated new repository and intermediate workspace. The public credit is Ayo Ahmed — Independent concept.
