@@ -1,0 +1,29 @@
+{
+  "name": "package-booking-proof",
+  "main": "src/worker.js",
+  "compatibility_date": "2026-10-13",
+  "workers_dev": true,
+  "preview_urls": false,
+  "assets": {
+    "directory": "./public",
+    "binding": "ASSETS",
+    "run_worker_first": true
+  },
+  "durable_objects": {
+    "bindings": [
+      {
+        "name": "BOOKING_SESSIONS",
+        "class_name": "BookingSession"
+      }
+    ]
+  },
+  "migrations": [
+    {
+      "tag": "v1",
+      "new_sqlite_classes": [
+        "BookingSession"
+      ]
+    }
+  ],
+  "account_id": "649d0a153ac1f1683adc45b8d9cf4f8f"
+}
