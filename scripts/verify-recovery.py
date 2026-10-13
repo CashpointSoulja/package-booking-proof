@@ -1,6 +1,6 @@
 # Ayo Ahmed - Independent concept. Synthetic browser verification only.
 from playwright.sync_api import sync_playwright
-import json
+import json, os
 import argparse
 from pathlib import Path
 
@@ -11,7 +11,7 @@ Path('work/ui').mkdir(parents=True,exist_ok=True)
 Path('docs/pixel-proof').mkdir(parents=True,exist_ok=True)
 results={}
 with sync_playwright() as p:
- browser=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True,args=['--no-sandbox'])
+ browser=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium'),headless=True,args=['--no-sandbox'])
  context=browser.new_context(viewport={'width':390,'height':844},accept_downloads=True)
  page=context.new_page();page.goto(args.url);page.wait_for_selector('#primary-action:not([disabled])')
  def click(id):
