@@ -1,0 +1,4 @@
+.company-reference{display:flex;align-items:center;gap:12px;flex-wrap:wrap;margin:12px 0;font:500 12px/1.5 system-ui,sans-serif}
+.company-reference img{display:block;width:auto;max-width:86px;height:23px;object-fit:contain}
+.company-reference span{opacity:.9}
+@media(max-width:600px){.masthead{flex-wrap:wrap;gap:10px}.masthead .identity{flex:1 1 65%}.masthead .company-reference{order:3;flex-basis:100%;margin:0}.masthead-link{flex:0 0 auto}}
