@@ -12,7 +12,7 @@ Path('docs/pixel-proof').mkdir(parents=True,exist_ok=True)
 out='docs/pixel-proof'
 results=[]
 with sync_playwright() as p:
- browser=p.chromium.launch(executable_path='/usr/bin/chromium',headless=True, args=['--no-sandbox'])
+ browser=p.chromium.launch(executable_path=os.environ.get('CHROMIUM_PATH','/usr/bin/chromium'),headless=True, args=['--no-sandbox'])
  for width in [320,390,540,1440]:
   context=browser.new_context(viewport={'width':width,'height':900})
   page=context.new_page(); errors=[]
