@@ -1,0 +1,57 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1">
+  <meta name="theme-color" content="#351b2d">
+  <meta name="description" content="Ayo Ahmed's independent, unofficial booking concept for Trybe. An interactive synthetic demonstration of package reservation and payment recovery.">
+  <title>Package booking proof — Ayo Ahmed</title>
+  <link rel="icon" href="/assets/favicon.svg" type="image/svg+xml">
+  <link rel="stylesheet" href="/styles.css">
+  <script type="module" src="/app.js"></script>
+</head>
+<body>
+  <header class="masthead">
+    <a href="#main" class="identity" aria-label="Ayo Ahmed, independent concept"><span class="identity-name">Ayo Ahmed<span class="identity-dot">.</span></span><span class="identity-detail">Independent concept for Trybe</span></a>
+    <a class="masthead-link" href="#proof">Explore the evidence <span aria-hidden="true">↗</span></a>
+  </header>
+  <div class="unofficial"><strong>UNOFFICIAL · SYNTHETIC DEMO</strong><span>Not connected to Trybe. All guests, inventory, orders and payments are synthetic.</span></div>
+  <main id="main">
+    <section class="hero" aria-labelledby="hero-title">
+      <div><p class="eyebrow">PACKAGE BOOKING PROOF / 01</p><h1 id="hero-title">One package.<br>Every part, protected.</h1><p class="hero-copy">A treatment, a room, a shared space. See how one reservation can keep them together — even when plans change.</p></div>
+      <div class="hero-note"><svg class="orbit" aria-hidden="true" viewBox="0 0 80 80"><g stroke="currentColor" stroke-width="6" stroke-linecap="round"><path d="M40 10v60M10 40h60M19 19l42 42M19 61l42-42"/></g></svg><p>A small working concept<br>for a complicated moment.</p><span class="fineprint">Designed &amp; authored by Ayo Ahmed</span></div>
+    </section>
+    <section class="simulation-bar" aria-label="Simulation controls"><div class="sim-status"><span class="status-dot" aria-hidden="true"></span><strong>Fixed simulation clock</strong><span id="clock-label">Connecting…</span></div><div class="sim-actions"><button class="text-button" id="advance-clock" disabled>Advance 6 minutes <span aria-hidden="true">→</span></button><button class="text-button" id="reset-demo">Reset demo</button></div></section>
+    <div id="global-message" class="notice" role="status" aria-live="polite" hidden></div>
+    <div class="booking-layout">
+      <section class="booking-panel" aria-labelledby="package-title">
+        <div class="panel-heading"><div><p class="eyebrow">THE EXPERIENCE</p><h2 id="package-title">Restore &amp; unwind</h2></div><span class="tag">2 parts · one booking</span></div>
+        <p class="package-copy">Take a little time for yourself. An individual treatment followed by a shared-area session.</p>
+        <div id="components" class="components"><p class="loading">Loading synthetic availability…</p></div>
+        <div class="booking-fields"><label for="slot-select">Start time <select id="slot-select" disabled><option>Loading…</option></select></label><div class="availability-note" id="availability-note">Availability is checked again when you reserve.</div></div>
+        <div class="stress-controls"><span>Try a real recovery path</span><button class="text-button" id="compete" disabled>Take the last place <span aria-hidden="true">↗</span></button><button class="text-button" id="revise-price" disabled>Change the price <span aria-hidden="true">↗</span></button></div>
+        <div id="conflict-box" class="recovery" hidden></div>
+        <div class="guest-section"><div class="guest-label"><span class="small-step">02</span><h3>Synthetic guest details</h3></div><label for="guest-name">Demo guest name <input id="guest-name" type="text" value="Synthetic guest 01" readonly aria-describedby="guest-note"><span id="guest-note" class="fineprint">Fixed demo identity. No personal details are collected.</span></label><label for="guest-preference" class="preference-label">Treatment preference <select id="guest-preference"><option value="none">No preference</option><option value="quiet">A quiet treatment</option></select></label><label class="checkbox-row" for="consent"><input id="consent" type="checkbox"><span>I confirm these are synthetic details and consent to the simulated booking.</span></label></div>
+      </section>
+      <aside class="summary-panel" aria-labelledby="summary-title">
+        <div class="summary-top"><p class="eyebrow">YOUR BOOKING</p><h2 id="summary-title">A moment,<br>held together.</h2></div>
+        <ol class="progress" aria-label="Booking progress"><li id="step-hold" class="active"><span>1</span>Hold</li><li id="step-validate"><span>2</span>Review</li><li id="step-submit"><span>3</span>Submit</li></ol>
+        <div class="summary-lines"><div><span id="summary-package-name">Restore &amp; unwind</span><strong id="summary-time">—</strong></div><div><span>Treatment + shared space</span><span id="summary-duration">—</span></div></div>
+        <div class="price-row"><span>Package total</span><strong id="summary-price">—</strong></div><p class="price-note">Authoritative quote · synthetic GBP</p>
+        <div id="hold-status" class="hold-status" role="status" aria-live="polite"><span class="hold-icon" aria-hidden="true">○</span><div><strong>Choose your moment</strong><p>Both parts are reserved together.</p></div></div>
+        <div id="booking-actions" class="booking-actions"><button id="primary-action" class="primary-button" disabled>Hold both parts <span aria-hidden="true">→</span></button><button id="release-hold" class="secondary-button" hidden>Release this hold</button></div>
+        <div id="receipt-box" class="receipt" hidden></div>
+        <p class="payment-note"><span aria-hidden="true">◇</span> No real payment is taken. Submission and simulated settlement are separate.</p>
+      </aside>
+    </div>
+    <section id="outcome-panel" class="outcome-panel" hidden aria-label="Booking outcome"></section>
+    <section class="proof-section" id="proof" aria-labelledby="proof-title">
+      <div class="proof-heading"><div><p class="eyebrow">THE WORK BEHIND THE MOMENT</p><h2 id="proof-title">Trust is a behaviour.<br>Let’s put it to the test.</h2></div><p>Run the same domain rules used by this booking. See what passes, what fails, and what happens when a rule is deliberately broken.</p></div>
+      <div class="proof-tools"><button id="run-eval" class="secondary-button">Run deterministic checks <span aria-hidden="true">↗</span></button><button id="run-broken" class="text-button">Inject a broken rule</button><button id="export-audit" class="text-button">Export session audit <span aria-hidden="true">↓</span></button></div>
+      <div id="eval-results" class="eval-results" aria-live="polite"><p class="fineprint">No checks have been run in this session.</p></div>
+      <details class="import-proof"><summary>Synthetic inventory import · preview before commit</summary><p>A fixed demo room tests the same atomic import boundary. Personal uploads are not accepted.</p><button id="preview-import" class="secondary-button">Preview one synthetic room</button><div id="import-preview" hidden></div></details><section class="observation-strip" aria-labelledby="observation-title"><div><h3 id="observation-title">What this session actually shows</h3><p id="observation-window">Connecting to the synthetic session…</p></div><div id="observation-stats" class="observation-stats"></div><div id="observation-supply" class="observation-supply"></div><p class="fineprint">Current state observations only. Baseline unavailable; no conversion, utilisation or revenue uplift is claimed.</p></section><div class="principles"><article><span>01 / TOGETHER</span><h3>All parts, or none.</h3><p>A package only holds when every component has capacity. Expiry releases every part.</p></article><article><span>02 / EXPLICIT</span><h3>Changes need a yes.</h3><p>An alternative shows its new time and price. Your earlier choice is never silently replaced.</p></article><article><span>03 / OWNED</span><h3>Failure has a next step.</h3><p>A failed payment becomes an owned exception. A submitted order stays unfulfilled until settlement.</p></article></div>
+    </section>
+  </main>
+  <footer><div class="footer-identity">Ayo Ahmed<span>.</span><p>Independent product concept · October 2026</p></div><p>Unofficial exploration inspired by Trybe’s public product materials.<br>Synthetic data only. No vendor API compatibility is claimed.</p><a href="#main">Back to the booking ↑</a></footer>
+</body>
+</html>

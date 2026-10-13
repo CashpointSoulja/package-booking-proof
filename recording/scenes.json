@@ -1,0 +1,65 @@
+{
+  "title": "Ayo Ahmed — Independent concept for Trybe",
+  "durationSeconds": 105,
+  "fps": 30,
+  "width": 1080,
+  "height": 1920,
+  "scenes": [
+    {
+      "id": "01-introduction",
+      "start": 0,
+      "duration": 10,
+      "narration": "I'm Ayo Ahmed. This is my independent concept for Trybe. It's unofficial: every guest, booking and payment in this demonstration is synthetic.",
+      "intent": "Show Ayo, Unofficial, Independent concept and synthetic disclosure."
+    },
+    {
+      "id": "02-package-hold",
+      "start": 10,
+      "duration": 11,
+      "narration": "This package combines a treatment, practitioner and room with a shared area session. I review both parts, the time and the total, then hold them together.",
+      "intent": "Show components and total, then create a real synthetic all-or-nothing hold."
+    },
+    {
+      "id": "03-expiry",
+      "start": 21,
+      "duration": 14,
+      "narration": "Now I advance the fixed simulation clock. The hold expires and every component is released. I request fresh availability before trying again. An expired hold cannot carry old evidence into checkout.",
+      "intent": "Advance six minutes; show expired state; request fresh availability and show reviewed fresh snapshot."
+    },
+    {
+      "id": "04-conflict-recovery",
+      "start": 35,
+      "duration": 15,
+      "narration": "A competing synthetic reservation now takes the last place. My earlier snapshot fails. The alternative shows a different time and total. I accept those changes explicitly, then both package parts are held together.",
+      "intent": "Compete, attempt stale snapshot, show explicit difference, accept alternative and display new hold."
+    },
+    {
+      "id": "05-validation-submit",
+      "start": 50,
+      "duration": 15,
+      "narration": "I add synthetic consent and validate the latest evidence. Changing the treatment preference invalidates that check, so I validate again. Only then do I submit the booking and receive its receipt.",
+      "intent": "Consent, validate, edit preference, prove invalidation, revalidate and submit."
+    },
+    {
+      "id": "06-settlement-distinction",
+      "start": 65,
+      "duration": 13,
+      "narration": "Submission isn't settlement. I recover the authoritative receipt, then try fulfilment. It stays blocked while payment is pending. Repeating the same request cannot create another booking, and no real payment is taken.",
+      "intent": "Recover receipt; attempt fulfilment and show NOT_SETTLED; display submitted outcome."
+    },
+    {
+      "id": "07-owned-exception",
+      "start": 78,
+      "duration": 13,
+      "narration": "A simulated settlement failure becomes an owned exception. The operator sees a named owner and the next recovery step. I record a synthetic handoff. Nothing is fulfilled, and no external message is sent.",
+      "intent": "Fail settlement, show exception owner/next action, record synthetic handoff."
+    },
+    {
+      "id": "08-evidence-export",
+      "start": 91,
+      "duration": 14,
+      "narration": "Finally, I execute the domain checks, inject a broken rule and show the red failure. I export this synthetic session audit. These are test observations, not conversion uplift. I would validate the concept with guests and operators.",
+      "intent": "Execute green evaluator, inject red evaluator, export actual synthetic session audit; keep disclosure visible."
+    }
+  ]
+}

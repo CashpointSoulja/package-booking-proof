@@ -1,0 +1,291 @@
+{
+  "ready": true,
+  "basis": "Selectors, handlers and expected text inspected in public/index.html and public/app.js. Approved public deployment execution remains pending.",
+  "scenes": [
+    {
+      "id": "01-introduction",
+      "actions": [
+        {
+          "kind": "show",
+          "selector": ".identity",
+          "expect": {
+            "selector": ".identity",
+            "text": "Ayo Ahmed"
+          }
+        }
+      ]
+    },
+    {
+      "id": "02-package-hold",
+      "actions": [
+        {
+          "kind": "show",
+          "selector": "#components",
+          "expect": {
+            "selector": "#components",
+            "text": "Practitioner"
+          },
+          "waitAfterSeconds": 2
+        },
+        {
+          "kind": "show",
+          "selector": "#summary-price",
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "click",
+          "selector": "#primary-action",
+          "expect": {
+            "selector": "#hold-status",
+            "text": "left on this hold"
+          },
+          "waitAfterSeconds": 1
+        }
+      ]
+    },
+    {
+      "id": "03-expiry",
+      "actions": [
+        {
+          "kind": "click",
+          "selector": "#advance-clock",
+          "expect": {
+            "selector": "#hold-status",
+            "text": "Your hold has expired"
+          },
+          "waitAfterSeconds": 3
+        },
+        {
+          "kind": "click",
+          "selector": "#primary-action",
+          "expect": {
+            "selector": "#hold-status",
+            "text": "Fresh availability reviewed"
+          },
+          "waitAfterSeconds": 3
+        }
+      ]
+    },
+    {
+      "id": "04-conflict-recovery",
+      "actions": [
+        {
+          "kind": "click",
+          "selector": "#compete",
+          "expect": {
+            "selector": "#global-message",
+            "text": "competing synthetic booking"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "click",
+          "selector": "#primary-action",
+          "expect": {
+            "selector": "#conflict-box",
+            "text": "EXPLICIT ALTERNATIVE"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "show",
+          "selector": ".change-grid",
+          "expect": {
+            "selector": ".change-grid",
+            "text": "YOUR EARLIER CHOICE"
+          },
+          "waitAfterSeconds": 3
+        },
+        {
+          "kind": "click",
+          "selector": "#accept-alternative",
+          "expect": {
+            "selector": "#global-message",
+            "text": "Alternative accepted"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "show",
+          "selector": "#hold-status",
+          "expect": {
+            "selector": "#hold-status",
+            "text": "left on this hold"
+          }
+        }
+      ]
+    },
+    {
+      "id": "05-validation-submit",
+      "actions": [
+        {
+          "kind": "check",
+          "selector": "#consent",
+          "expect": {
+            "selector": "#global-message",
+            "text": "Guest evidence updated"
+          }
+        },
+        {
+          "kind": "click",
+          "selector": "#primary-action",
+          "expect": {
+            "selector": "#primary-action",
+            "text": "Submit synthetic booking"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "select",
+          "selector": "#guest-preference",
+          "value": "quiet",
+          "expect": {
+            "selector": "#primary-action",
+            "text": "Validate latest evidence"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "click",
+          "selector": "#primary-action",
+          "expect": {
+            "selector": "#hold-status",
+            "text": "Latest evidence validated"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "click",
+          "selector": "#primary-action",
+          "expect": {
+            "selector": "#outcome-panel",
+            "text": "awaiting simulated settlement"
+          },
+          "waitAfterSeconds": 1
+        }
+      ]
+    },
+    {
+      "id": "06-settlement-distinction",
+      "actions": [
+        {
+          "kind": "click",
+          "selector": "#recover-receipt",
+          "expect": {
+            "selector": "#global-message",
+            "text": "authoritative receipt was recovered"
+          },
+          "waitAfterSeconds": 2
+        },
+        {
+          "kind": "click",
+          "selector": "#try-fulfill",
+          "expect": {
+            "selector": "#global-message",
+            "text": "NOT_SETTLED"
+          },
+          "waitAfterSeconds": 2
+        },
+        {
+          "kind": "show",
+          "selector": "#outcome-panel",
+          "expect": {
+            "selector": "#outcome-panel",
+            "text": "fulfilment is blocked"
+          },
+          "waitAfterSeconds": 1
+        }
+      ]
+    },
+    {
+      "id": "07-owned-exception",
+      "actions": [
+        {
+          "kind": "click",
+          "selector": "#settle-failed",
+          "expect": {
+            "selector": "#outcome-panel",
+            "text": "A failed payment has a next step"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "show",
+          "selector": "#exception-owner",
+          "expect": {
+            "selector": "#exception-owner",
+            "text": "Owner:"
+          },
+          "waitAfterSeconds": 2
+        },
+        {
+          "kind": "click",
+          "selector": "#handoff-exception",
+          "expect": {
+            "selector": "#global-message",
+            "text": "Synthetic handoff recorded"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "show",
+          "selector": ".exception-details",
+          "expect": {
+            "selector": "#outcome-panel",
+            "text": "Nothing is fulfilled"
+          },
+          "waitAfterSeconds": 1
+        }
+      ]
+    },
+    {
+      "id": "08-evidence-export",
+      "actions": [
+        {
+          "kind": "click",
+          "selector": "#run-eval",
+          "expect": {
+            "selector": ".eval-summary",
+            "text": "0 failed"
+          },
+          "waitAfterSeconds": 2
+        },
+        {
+          "kind": "click",
+          "selector": "#run-broken",
+          "expect": {
+            "selector": "#eval-results",
+            "text": "FAIL"
+          },
+          "waitAfterSeconds": 2
+        },
+        {
+          "kind": "show",
+          "selector": ".eval-summary",
+          "expect": {
+            "selector": "#eval-results",
+            "text": "FAIL"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "download",
+          "selector": "#export-audit",
+          "expect": {
+            "selector": "#global-message",
+            "text": "Synthetic session audit exported"
+          },
+          "waitAfterSeconds": 1
+        },
+        {
+          "kind": "show",
+          "selector": ".unofficial",
+          "expect": {
+            "selector": ".unofficial",
+            "text": "Not connected to Trybe"
+          }
+        }
+      ]
+    }
+  ]
+}

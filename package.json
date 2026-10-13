@@ -1,0 +1,21 @@
+{
+  "name": "package-booking-proof",
+  "version": "0.1.0",
+  "private": true,
+  "type": "module",
+  "description": "Ayo Ahmed - Independent concept. Synthetic package booking integrity proof.",
+  "author": "Ayo Ahmed - Independent concept",
+  "scripts": {
+    "start": "node scripts/worker-cli.mjs dev --ip 127.0.0.1 --port 8787 --persist-to work/dev-state",
+    "test": "node --test tests/*.test.mjs",
+    "test:domain": "node --test tests/domain.test.mjs",
+    "dev:worker": "node scripts/worker-cli.mjs dev --ip 127.0.0.1 --port 8787 --persist-to work/dev-state",
+    "deploy:check": "node scripts/worker-cli.mjs deploy --dry-run --outdir work/worker-build",
+    "test:runtime": "node --test tests/runtime.test.mjs",
+    "evidence": "node tests/report.mjs"
+  },
+  "devDependencies": {
+    "wrangler": "4.149.0",
+    "miniflare": "5.20261006.1-alpha"
+  }
+}

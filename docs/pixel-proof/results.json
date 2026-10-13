@@ -1,0 +1,30 @@
+[
+  {
+    "width": 320,
+    "horizontalOverflow": false,
+    "workflow": "conflict + changed price + explicit accepted alternative + validation edit + submitted-not-settled block + failed settlement + owned handoff",
+    "eval": "32/34 scenarios passed \u00b7 2 failed\n108 executed assertions \u00b7 broken rule injected",
+    "consoleErrors": []
+  },
+  {
+    "width": 390,
+    "horizontalOverflow": false,
+    "workflow": "conflict + changed price + explicit accepted alternative + validation edit + submitted-not-settled block + failed settlement + owned handoff",
+    "eval": "32/34 scenarios passed \u00b7 2 failed\n108 executed assertions \u00b7 broken rule injected",
+    "consoleErrors": []
+  },
+  {
+    "width": 540,
+    "horizontalOverflow": false,
+    "workflow": "conflict + changed price + explicit accepted alternative + validation edit + submitted-not-settled block + failed settlement + owned handoff",
+    "eval": "32/34 scenarios passed \u00b7 2 failed\n108 executed assertions \u00b7 broken rule injected",
+    "consoleErrors": []
+  },
+  {
+    "width": 1440,
+    "horizontalOverflow": false,
+    "workflow": "conflict + changed price + explicit accepted alternative + validation edit + submitted-not-settled block + failed settlement + owned handoff",
+    "eval": "32/34 scenarios passed \u00b7 2 failed\n108 executed assertions \u00b7 broken rule injected",
+    "consoleErrors": []
+  }
+]

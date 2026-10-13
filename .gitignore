@@ -1,0 +1,12 @@
+node_modules/
+.wrangler/
+work/
+*.sqlite
+*.sqlite-shm
+*.sqlite-wal
+.env
+.dev.vars
+recording/captures/
+recording/rendered/
+__pycache__/
+*.pyc

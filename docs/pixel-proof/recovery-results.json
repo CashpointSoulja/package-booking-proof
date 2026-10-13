@@ -1,0 +1,11 @@
+{
+  "expiryKeyboard": "Keyboard hold, expiry release, fresh quote review then new hold passed.",
+  "syntheticImport": "Generated strict room preview and atomic commit returned 4 resource records; no personal data input.",
+  "auditExport": {
+    "synthetic": true,
+    "rows": 9,
+    "denominatorMatches": true
+  },
+  "unknownResult": "Committed reserve response aborted; primary remained blocked across reload; receipt lookup recovered exactly one original booking.",
+  "disclosure": "Synthetic unofficial disclosure stays visible while scrolling; no horizontal overflow."
+}
